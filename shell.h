@@ -17,6 +17,7 @@ extern char **environ;
 extern __sighandler_t signal(int __sig, __sighandler_t __handler);
 
 //Handle built ins
+int _putchar(char c);
 int checker(char **cmd, char *buf);
 void prompt_user(void);
 void handle_signal(int m);
