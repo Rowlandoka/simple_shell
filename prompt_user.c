@@ -9,6 +9,7 @@
 void prompt_user(void)
 {
 	flags_r flag;
+
 	if ((isatty(STDIN_FILENO) == 1) && (isatty(STDOUT_FILENO) == 1))
 		flag.interactive = 1;
 	if (flag.interactive)

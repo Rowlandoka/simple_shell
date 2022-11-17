@@ -12,7 +12,7 @@ int main(int ac, char **av, char *envp[])
 {
 	info_t info;
 	flags_r flag = {"interactive"};
-	
+
 	char *line = NULL, *pathcommand = NULL, *path = NULL;
 	size_t bufsize = 0;
 	ssize_t linesize = 0;
