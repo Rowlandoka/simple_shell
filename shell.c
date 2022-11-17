@@ -10,6 +10,9 @@
 
 int main(int ac, char **av, char *envp[])
 {
+	info_t info;
+	flags_r flag = {"interactive"};
+	
 	char *line = NULL, *pathcommand = NULL, *path = NULL;
 	size_t bufsize = 0;
 	ssize_t linesize = 0;
@@ -43,7 +46,7 @@ int main(int ac, char **av, char *envp[])
 		else
 			execution(pathcommand, command);
 	}
-	if (linesize < 0 && flags.interactive)
+	if (linesize < 0 && flag.interactive)
 		write(STDERR_FILENO, "\n", 1);
 	free(line);
 	return (0);
