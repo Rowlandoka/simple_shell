@@ -1,6 +1,6 @@
 # 0x16. C - Simple Shell
  **By Spencer Cheng, featuring Julien Barbier**
- Project to be done in teams of 2 people (your team: Godswill Kalu, Vatalis Ibeh)
+ Project to be done in teams of 2 people (your team: Oka Rowland, Saefullah Sadiq)
 
 # Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
@@ -31,27 +31,6 @@ Your shell should not have any memory leaks
 No more than 5 functions per file
 All your header files should be include guarded
 Use system calls only when you need to (why?)
-# GitHub
-*There should be one project repository per group. If you and your partner have a repository with the same name in both your accounts, you risk a 0% score. Add your partner as a collaborator. *
-
-More Info
-Output
-Unless specified otherwise, your program must have the exact same output as sh (/bin/sh) as well as the exact same error output.
-The only difference is when you print an error, the name of the program must be equivalent to your argv[0] (See below)
-Example of error with sh:
-
-$ echo "qwerty" | /bin/sh
-/bin/sh: 1: qwerty: not found
-$ echo "qwerty" | /bin/../bin/sh
-/bin/../bin/sh: 1: qwerty: not found
-$
-Same error with your program hsh:
-
-$ echo "qwerty" | ./hsh
-./hsh: 1: qwerty: not found
-$ echo "qwerty" | ./././hsh
-./././hsh: 1: qwerty: not found
-$
 
 # List of allowed functions and system calls
 access (man 2 access)
@@ -103,14 +82,3 @@ write (man 2 write)
 - string.c -it handles the strings(string length, write string,find string in directory,concatane strings....)
 - cmd.c - it finds the command the user entered.
 - execute.c - execute the command.
-
-## How to add Author file
-`Bash script for generating the list of authors in git repo`
-```
-#!/bin/sh
-
-git shortlog -se \
-  | perl -spe 's/^\s+\d+\s+//' \
-  | sed -e '/^CommitSyncScript.*$/d' \
-  > AUTHORS
-  ```
